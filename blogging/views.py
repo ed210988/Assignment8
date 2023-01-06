@@ -8,7 +8,7 @@ from django.views.generic.detail import DetailView
 
 class PostListView(ListView):
 
-    queryset = Post.objects.order_by('published_date')
+    queryset = Post.objects.order_by('-published_date')
     context_object_name = 'post_list'
     template_name = 'blogging/list.html'
 
